@@ -1,6 +1,6 @@
 # news-appp
 # this app build for get data from Api to Show News 
-# build app with Dio Package and Bloc
+## build app with Dio Package and Bloc
 A new Flutter project.
 
 ## Getting Started
