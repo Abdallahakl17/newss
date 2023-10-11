@@ -3,6 +3,7 @@ abstract class NewsState {}
 class IntialState extends NewsState {}
 
 class BottomNavState extends NewsState {}
+class ChangeModeState extends NewsState {}
 
 class BusinessLoadingState extends NewsState {}
 
@@ -11,6 +12,14 @@ class BusinessSucessState extends NewsState {}
 class BusinessErorrState extends NewsState {
   final String erorr;
   BusinessErorrState(this.erorr);
+}
+class SearchLoadingState extends NewsState {}
+
+class SearchSucessState extends NewsState {}
+
+class SearchErorrState extends NewsState {
+  final String erorr;
+  SearchErorrState(this.erorr);
 }
 class SportLoadingState extends NewsState {}
 

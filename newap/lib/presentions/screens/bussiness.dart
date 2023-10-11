@@ -20,7 +20,7 @@ class Business extends StatelessWidget {
               builder: (context) => ListView.separated(
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
-                    return buildItems(newCubit.businessData[index]);
+                    return buildItems(newCubit.businessData[index],context,);
                   },
                   separatorBuilder: (context, index) {
                     return dividerItem();

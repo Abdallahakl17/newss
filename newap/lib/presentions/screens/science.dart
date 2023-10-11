@@ -20,7 +20,7 @@ class Science extends StatelessWidget {
               builder: (context) => ListView.separated(
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
-                    return buildItems(newCubit.scienceData[index]);
+                    return buildItems(newCubit.scienceData[index],context);
                   },
                   separatorBuilder: (context, index) {
                     return dividerItem();

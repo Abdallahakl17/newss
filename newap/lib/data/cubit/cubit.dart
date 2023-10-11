@@ -94,4 +94,27 @@ class NewsCubit extends Cubit<NewsState> {
       emit(ScienceErorrState(erorr));
     });
   }
+
+  List<dynamic> searchData = [];
+  void getSearchData(String value) {
+    searchData = [];
+    emit(SearchLoadingState());
+    ApiHelper.getData(
+            query: {'q': value, 'apiKey': 'ab061c22234f4d74a8e2e3ec35cbfa36'},
+            path: 'v2/everything')
+        .then((value) {
+      searchData = value.data['articles'];
+
+      emit(SearchSucessState());
+    }).catchError((erorr) {
+      log(erorr.toString(), name: 'erorr');
+      emit(SearchErorrState(erorr));
+    });
+  }
+
+  bool isDark = false;
+  void changeMode() {
+    isDark = !isDark;
+    emit(ChangeModeState());
+  }
 }

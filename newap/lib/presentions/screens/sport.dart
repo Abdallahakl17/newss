@@ -20,7 +20,7 @@ class   Sport extends StatelessWidget {
               builder: (context) => ListView.separated(
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
-                    return buildItems(newCubit.sportData[index]);
+                    return buildItems(newCubit.sportData[index],context);
                   },
                   separatorBuilder: (context, index) {
                     return dividerItem();
